@@ -42,7 +42,6 @@ public class Login extends AppCompatActivity {
                 Semail = email.getText().toString();
                 Spass = pass.getText().toString();
                 boolean login = db.login(Semail, Spass);
-
                 if (Semail.equals("")){
                     Toast.makeText(Login.this,"email can't be empty",Toast.LENGTH_SHORT).show();
                     email.requestFocus();

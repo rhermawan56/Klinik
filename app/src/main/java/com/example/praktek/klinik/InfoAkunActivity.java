@@ -2,37 +2,30 @@ package com.example.praktek.klinik;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 
 public class InfoAkunActivity extends AppCompatActivity {
+
+    CardView home;
+    TextView nama;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_akun);
-    }
+        home = (CardView) findViewById(R.id.menu_cardhome);
+        nama = (TextView) findViewById(R.id.nama);
+        nama.setText(ModalLogin.get_Nama());
 
-    public void Beranda(View v) {
-        Intent beranda = new Intent(InfoAkunActivity.this, Menu.class);
-        startActivity(beranda);
-    }
-
-    public void RumahSakit(View v) {
-        Intent rumahsakit = new Intent(InfoAkunActivity.this, RumahSakitActivity.class);
-        startActivity(rumahsakit);
-    }
-
-    public void BookingDokter(View v) {
-        Intent bookingdokter = new Intent(InfoAkunActivity.this, BookingDokterActivity.class);
-        startActivity(bookingdokter);
-    }
-
-    public void InfoAkun(View v) {
-        Intent infoakun = new Intent(InfoAkunActivity.this, InfoAkunActivity.class);
-        startActivity(infoakun);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InfoAkunActivity.this, Menu.class);
+                startActivity(intent);
+            }
+        });
     }
 }
