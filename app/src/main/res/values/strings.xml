@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Klinik</string>
     <string name="title_activity_info_akun">InfoAkunActivity</string>
+
+    <string name="hospital_name1">Rumah Sakit Hasan Sadikin</string>
+    <string name="hospital_description1">Jl. Pasteur No.38, Pasteur, Sukajadi, Kota Bandung, Jawa Barat 40161</string>
+
+    <string name="hospital_name2">Rumah Sakit Umum Avisena</string>
+    <string name="hospital_description2">Jl. Melong Raya No.170, Melong, Cimahi Sel., Kota Cimahi, Jawa Barat 40534</string>
+
+    <string name="hospital_name3">Klinik Utama Handayani</string>
+    <string name="hospital_description3">Jl. Gunung Batu No.7, Sukaraja, Cicendo, Kota Bandung, Jawa Barat 40175</string>
 </resources>

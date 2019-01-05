@@ -18,7 +18,17 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".Create" />
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".RumahSakitActivity" />
+        <activity android:name=".BookingDokterActivity" />
+        <activity
+            android:name=".InfoAkunActivity"
+            android:label="@string/title_activity_info_akun"
+            android:theme="@style/AppTheme"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
