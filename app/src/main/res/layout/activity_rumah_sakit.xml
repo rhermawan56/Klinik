@@ -12,211 +12,227 @@
         android:layout_height="52dp"
         android:layout_marginTop="5dp">
 
-        <ImageView
-            android:id="@+id/person"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="6dp"
-            android:src="@drawable/ic_person" />
-
         <TextView
             android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/person"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/abeezee"
             android:text="Rumah Sakit"
-            android:textSize="11dp" />
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            app:srcCompat="@drawable/ic_back"
+            android:onClick="BackToMenu"/>
     </RelativeLayout>
 
-    <ScrollView
-        android:id="@+id/scroll1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relatif1">
-
-        <LinearLayout
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll_view_hospitals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_below="@+id/linear_layout_hospitals">
 
-            <android.support.v7.widget.CardView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/card_view"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="380dp"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <RelativeLayout
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="380dp"
+                    android:layout_margin="8dp">
 
-                    <ImageView
-                        android:id="@+id/thumbnail"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_alignParentTop="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/img_rshs" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/thumbnail"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_name1"
-                        android:textColor="#222"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/thumbnail"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_rshs" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/title"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_description1"
-                        android:textColor="#666"
-                        android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thumbnail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_name1"
+                            android:textColor="#222"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
 
-                    <com.beardedhen.androidbootstrap.BootstrapButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginBottom="139dp"
-                        android:layout_marginEnd="11dp"
-                        android:fontFamily="@font/abeezee"
-                        android:text="Detail"
-                        app:bootstrapBrand="primary"
-                        app:bootstrapSize="lg"
-                        app:buttonMode="regular"
-                        app:roundedCorners="true"
-                        app:showOutline="false" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_description1"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
 
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="139dp"
+                            android:layout_marginEnd="11dp"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Detail"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:buttonMode="regular"
+                            app:roundedCorners="true"
+                            app:showOutline="false" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="380dp"
-                android:layout_margin="8dp">
-
-                <RelativeLayout
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_avisena"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="380dp"
+                    android:layout_margin="8dp">
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_alignParentTop="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/img_avisena" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_name2"
-                        android:textColor="#222"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/thumbnail"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_avisena" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_description2"
-                        android:textColor="#666"
-                        android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thumbnail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_name2"
+                            android:textColor="#222"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
 
-                    <com.beardedhen.androidbootstrap.BootstrapButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginBottom="139dp"
-                        android:layout_marginEnd="11dp"
-                        android:fontFamily="@font/abeezee"
-                        android:text="Detail"
-                        app:bootstrapBrand="primary"
-                        app:bootstrapSize="lg"
-                        app:buttonMode="regular"
-                        app:roundedCorners="true"
-                        app:showOutline="false" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_description2"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
 
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="139dp"
+                            android:layout_marginEnd="11dp"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Detail"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:buttonMode="regular"
+                            app:roundedCorners="true"
+                            app:showOutline="false" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="380dp"
-                android:layout_margin="8dp">
-
-                <RelativeLayout
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_handayani"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="380dp"
+                    android:layout_margin="8dp">
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_alignParentTop="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/img_handayani" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_name3"
-                        android:textColor="#222"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/thumbnail"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_handayani" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/abeezee"
-                        android:maxLines="3"
-                        android:padding="8dp"
-                        android:text="@string/hospital_description3"
-                        android:textColor="#666"
-                        android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thumbnail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_name3"
+                            android:textColor="#222"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
 
-                    <com.beardedhen.androidbootstrap.BootstrapButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginBottom="139dp"
-                        android:layout_marginEnd="11dp"
-                        android:fontFamily="@font/abeezee"
-                        android:text="Detail"
-                        app:bootstrapBrand="primary"
-                        app:bootstrapSize="lg"
-                        app:buttonMode="regular"
-                        app:roundedCorners="true"
-                        app:showOutline="false" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="@string/hospital_description3"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
 
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="139dp"
+                            android:layout_marginEnd="11dp"
+                            android:fontFamily="@font/abeezee"
+                            android:text="Detail"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:buttonMode="regular"
+                            app:roundedCorners="true"
+                            app:showOutline="false" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

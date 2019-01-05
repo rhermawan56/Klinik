@@ -12,23 +12,342 @@
         android:layout_height="52dp"
         android:layout_marginTop="5dp">
 
-        <ImageView
-            android:id="@+id/person"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="6dp"
-            android:src="@drawable/ic_person" />
-
         <TextView
             android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/person"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/abeezee"
             android:text="Booking Dokter"
-            android:textSize="11dp" />
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            app:srcCompat="@drawable/ic_back"
+            android:onClick="BackToMenu"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll_view_hospitals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_hospitals">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="dr. Mille Milasari, Sp. B"
+                            android:textColor="#222"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/textView3"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Rumah Sakit Hasan Sadikin"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Dokter Bedah"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="119dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/dokter_4" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="dr. Kevin Irwan, Sp. KG"
+                            android:textColor="#222"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/textView3"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Rumah Sakit Hasan Sadikin"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Dokter Gigi"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="119dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/dokter_1" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="dr. Nina Natalia, Sp. A"
+                            android:textColor="#222"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/textView3"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Rumah Sakit Umum Avisena"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Dokter Anak"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="119dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/dokter_4" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="dr. Rachelia Salanti"
+                            android:textColor="#222"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/textView3"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Rumah Sakit Umum Avisena"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Dokter Umum"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="119dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/dokter_5" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/card_view_rshs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="dr. Puji Ichtiarti, Sp. OG"
+                            android:textColor="#222"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/textView3"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Klinik Utama Handayani"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/title"
+                            android:layout_below="@+id/title"
+                            android:fontFamily="@font/abeezee"
+                            android:maxLines="3"
+                            android:padding="8dp"
+                            android:text="Dokter Kandungan"
+                            android:textColor="#666"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="119dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/dokter_6" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
     <RelativeLayout

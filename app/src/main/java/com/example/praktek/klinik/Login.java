@@ -59,9 +59,4 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
-    public void Lewati(View v) {
-        Intent lewati = new Intent(Login.this, RumahSakitActivity.class);
-        startActivity(lewati);
-    }
 }
