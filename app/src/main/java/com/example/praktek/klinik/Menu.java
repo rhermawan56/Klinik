@@ -7,23 +7,17 @@ import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
 
-    LinearLayout home;
+    TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        home = (LinearLayout) findViewById(R.id.card_home);
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Menu.this, Login.class);
-                startActivity(intent);
-            }
-        });
+        name = (TextView) findViewById(R.id.nama);
+        name.setText(ModalLogin.get_Nama());
     }
 }
