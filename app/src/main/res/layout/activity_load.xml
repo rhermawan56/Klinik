@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@color/coloractivity"
+    tools:context=".Load">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clinic Solution"
+        android:textSize="24dp"
+        android:textColor="@color/textblue"
+        android:textStyle="bold|italic"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/loadlogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_local_hospital"/>
+
+    <ImageView
+        android:id="@+id/load"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/google_logo" />
+
+</LinearLayout>
