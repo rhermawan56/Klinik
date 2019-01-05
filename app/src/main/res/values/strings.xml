@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Klinik</string>
+    <string name="title_activity_info_akun">InfoAkunActivity</string>
 </resources>

@@ -24,11 +24,11 @@
             android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/person"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
-            android:text="Pemilik Akun"
-            android:textSize="11dp"/>
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/person"
+            android:text="Booking Dokter"
+            android:textSize="11dp" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -56,7 +56,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_home_30"/>
+                        android:src="@drawable/ic_sm_home_30"
+                        android:onClick="Beranda"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -73,7 +74,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_rumah_sakit_30"/>
+                        android:src="@drawable/ic_sm_rumah_sakit_30"
+                        android:onClick="RumahSakit"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -90,7 +92,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_booking_dokter_30"/>
+                        android:src="@drawable/ic_sm_booking_dokter_30"
+                        android:onClick="BookingDokter"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -107,7 +110,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_info_user_30"/>
+                        android:src="@drawable/ic_sm_info_user_30"
+                        android:onClick="InfoAkun"/>
 
                     <TextView
                         android:layout_width="match_parent"
