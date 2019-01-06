@@ -9,8 +9,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="5dp">
+        android:layout_height="45dp"
+        android:background="@color/textblue">
 
         <TextView
             android:id="@+id/nama"
@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/abeezee"
-            android:text="Rumah Sakit"
+            android:text="RUMAH SAKIT"
             android:textColor="@android:color/black"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -30,8 +30,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
-            app:srcCompat="@drawable/ic_back"
-            android:onClick="BackToMenu"/>
+            android:onClick="BackToMenu"
+            app:srcCompat="@drawable/ic_back" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -48,16 +48,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
-                    android:layout_height="380dp"
+                    android:layout_height="360dp"
                     android:layout_margin="8dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="360dp">
 
                         <ImageView
                             android:id="@+id/thumbnail"
@@ -97,11 +96,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginBottom="139dp"
-                            android:layout_marginEnd="11dp"
+                            android:layout_marginBottom="119dp"
+                            android:layout_marginEnd="13dp"
                             android:fontFamily="@font/abeezee"
                             android:text="Detail"
-                            app:bootstrapBrand="primary"
+                            app:bootstrapBrand="success"
                             app:bootstrapSize="lg"
                             app:buttonMode="regular"
                             app:roundedCorners="true"
@@ -109,16 +108,15 @@
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/card_view_avisena"
                     android:layout_width="match_parent"
-                    android:layout_height="380dp"
+                    android:layout_height="360dp"
                     android:layout_margin="8dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="360dp">
 
                         <ImageView
                             android:id="@+id/thumbnail"
@@ -158,28 +156,28 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginBottom="139dp"
-                            android:layout_marginEnd="11dp"
+                            android:layout_marginBottom="119dp"
+                            android:layout_marginEnd="13dp"
                             android:fontFamily="@font/abeezee"
                             android:text="Detail"
-                            app:bootstrapBrand="primary"
+                            app:bootstrapBrand="success"
                             app:bootstrapSize="lg"
                             app:buttonMode="regular"
                             app:roundedCorners="true"
                             app:showOutline="false" />
+
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/card_view_handayani"
                     android:layout_width="match_parent"
-                    android:layout_height="380dp"
+                    android:layout_height="360dp"
                     android:layout_margin="8dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="360dp">
 
                         <ImageView
                             android:id="@+id/thumbnail"
@@ -219,15 +217,16 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginBottom="139dp"
-                            android:layout_marginEnd="11dp"
+                            android:layout_marginBottom="119dp"
+                            android:layout_marginEnd="13dp"
                             android:fontFamily="@font/abeezee"
                             android:text="Detail"
-                            app:bootstrapBrand="primary"
+                            app:bootstrapBrand="success"
                             app:bootstrapSize="lg"
                             app:buttonMode="regular"
                             app:roundedCorners="true"
                             app:showOutline="false" />
+
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>

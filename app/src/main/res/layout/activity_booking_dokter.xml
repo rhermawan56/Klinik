@@ -9,8 +9,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="5dp">
+        android:layout_height="45dp"
+        android:background="@color/textblue">
 
         <TextView
             android:id="@+id/nama"
@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/abeezee"
-            android:text="Booking Dokter"
+            android:text="DOKTER"
             android:textColor="@android:color/black"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
@@ -30,8 +30,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
-            app:srcCompat="@drawable/ic_back"
-            android:onClick="BackToMenu"/>
+            android:onClick="BackToMenu"
+            app:srcCompat="@drawable/ic_back" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,14 +56,14 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="122dp">
+                        android:layout_height="117dp">
 
                         <TextView
                             android:id="@+id/title"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/imageView"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -74,7 +74,7 @@
 
                         <TextView
                             android:id="@+id/textView2"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/textView3"
@@ -87,7 +87,7 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/title"
@@ -100,10 +100,11 @@
 
                         <ImageView
                             android:id="@+id/imageView"
-                            android:layout_width="119dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="110dp"
+                            android:layout_height="117dp"
                             android:layout_alignParentTop="true"
-                            app:srcCompat="@drawable/dokter_4" />
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/dokter_3" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
@@ -115,14 +116,14 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="122dp">
+                        android:layout_height="117dp">
 
                         <TextView
                             android:id="@+id/title"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/imageView2"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -133,7 +134,7 @@
 
                         <TextView
                             android:id="@+id/textView2"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/textView3"
@@ -146,7 +147,7 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/title"
@@ -159,10 +160,11 @@
 
                         <ImageView
                             android:id="@+id/imageView2"
-                            android:layout_width="119dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="110dp"
+                            android:layout_height="117dp"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/dokter_1" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
@@ -175,14 +177,14 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="122dp">
+                        android:layout_height="117dp">
 
                         <TextView
                             android:id="@+id/title"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/imageView3"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -193,7 +195,7 @@
 
                         <TextView
                             android:id="@+id/textView2"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/textView3"
@@ -206,7 +208,7 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/title"
@@ -219,10 +221,11 @@
 
                         <ImageView
                             android:id="@+id/imageView3"
-                            android:layout_width="119dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="110dp"
+                            android:layout_height="117dp"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/dokter_4" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
@@ -235,14 +238,14 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="122dp">
+                        android:layout_height="117dp">
 
                         <TextView
                             android:id="@+id/title"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/imageView4"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -253,7 +256,7 @@
 
                         <TextView
                             android:id="@+id/textView2"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/textView3"
@@ -266,7 +269,7 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/title"
@@ -279,10 +282,11 @@
 
                         <ImageView
                             android:id="@+id/imageView4"
-                            android:layout_width="119dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="110dp"
+                            android:layout_height="117dp"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/dokter_5" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
@@ -295,14 +299,14 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="122dp">
+                        android:layout_height="117dp">
 
                         <TextView
                             android:id="@+id/title"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/imageView5"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -313,7 +317,7 @@
 
                         <TextView
                             android:id="@+id/textView2"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/textView3"
@@ -326,7 +330,7 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="250dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignStart="@+id/title"
                             android:layout_below="@+id/title"
@@ -339,10 +343,11 @@
 
                         <ImageView
                             android:id="@+id/imageView5"
-                            android:layout_width="119dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="110dp"
+                            android:layout_height="117dp"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop"
                             app:srcCompat="@drawable/dokter_6" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>

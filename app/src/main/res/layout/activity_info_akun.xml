@@ -8,40 +8,20 @@
     tools:context=".Menu">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp">
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/textblue">
 
-        <android.support.v7.widget.CardView
+        <TextView
+            android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardElevation="15dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/info_logo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_sm_info_user_30"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Info akun"
-                    android:textAlignment="center"
-                    android:textColor="@color/textblue"
-                    android:textStyle="bold"
-                    android:textSize="20dp"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/abeezee"
+            android:text="INFO AKUN"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -193,12 +173,6 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_sm_home_30"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Beranda"
-                            android:textColor="@color/colorblack"
-                            android:textSize="10dp"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -225,12 +199,6 @@
                             android:layout_height="35dp"
                             android:src="@drawable/ic_sm_rumah_sakit_30"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="PoliKlinik"
-                            android:textColor="@color/colorblack"
-                            android:textSize="10dp"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -257,12 +225,6 @@
                             android:layout_height="35dp"
                             android:src="@drawable/ic_sm_booking_dokter_30"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Booking"
-                            android:textColor="@color/colorblack"
-                            android:textSize="10dp"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -287,13 +249,6 @@
                             android:layout_height="35dp"
                             android:src="@drawable/ic_sm_info_user_30"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Info"
-                            android:textSize="10dp"
-                            android:textColor="@color/colorblack"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </GridLayout>
