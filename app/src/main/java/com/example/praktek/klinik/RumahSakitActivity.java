@@ -32,9 +32,4 @@ public class RumahSakitActivity extends AppCompatActivity {
         Intent infoakun = new Intent(RumahSakitActivity.this, InfoAkunActivity.class);
         startActivity(infoakun);
     }
-
-    public void BackToMenu(View v) {
-        Intent backtomenu = new Intent(RumahSakitActivity.this, Menu.class);
-        startActivity(backtomenu);
-    }
 }

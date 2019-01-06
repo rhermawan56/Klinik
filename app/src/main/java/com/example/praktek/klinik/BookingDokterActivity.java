@@ -32,9 +32,4 @@ public class BookingDokterActivity extends AppCompatActivity {
         Intent infoakun = new Intent(BookingDokterActivity.this, InfoAkunActivity.class);
         startActivity(infoakun);
     }
-
-    public void BackToMenu(View v) {
-        Intent backtomenu = new Intent(BookingDokterActivity.this, Menu.class);
-        startActivity(backtomenu);
-    }
 }

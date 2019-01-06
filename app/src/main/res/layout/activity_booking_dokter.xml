@@ -9,34 +9,35 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/textblue">
+        android:layout_height="60dp">
 
-        <TextView
-            android:id="@+id/nama"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/abeezee"
-            android:text="DOKTER"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:layout_margin="10dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="7dp">
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="13dp"
-            android:onClick="BackToMenu"
-            app:srcCompat="@drawable/ic_back" />
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/abeezee"
+                android:text="DOKTER"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ScrollView
             android:id="@+id/scroll_view_hospitals"
             android:layout_width="match_parent"
@@ -52,7 +53,8 @@
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="7dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -63,7 +65,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/imageView"
+                            android:layout_toEndOf="@+id/profile_image"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -98,13 +100,16 @@
                             android:textColor="#666"
                             android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="110dp"
-                            android:layout_height="117dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/dokter_3" />
+                            android:layout_marginStart="11dp"
+                            android:src="@drawable/dokter_3"
+                            app:civ_border_color="@color/textblue"
+                            app:civ_border_width="1dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
@@ -112,7 +117,8 @@
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="7dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -123,7 +129,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/imageView2"
+                            android:layout_toEndOf="@+id/profile_image"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -158,14 +164,16 @@
                             android:textColor="#666"
                             android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="110dp"
-                            android:layout_height="117dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/dokter_1" />
+                            android:layout_marginStart="11dp"
+                            android:src="@drawable/dokter_1"
+                            app:civ_border_color="@color/textblue"
+                            app:civ_border_width="1dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
@@ -173,7 +181,8 @@
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="7dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -184,7 +193,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/imageView3"
+                            android:layout_toEndOf="@+id/profile_image"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -219,14 +228,16 @@
                             android:textColor="#666"
                             android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="110dp"
-                            android:layout_height="117dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/dokter_4" />
+                            android:layout_marginStart="11dp"
+                            android:src="@drawable/dokter_4"
+                            app:civ_border_color="@color/textblue"
+                            app:civ_border_width="1dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
@@ -234,18 +245,20 @@
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="7dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="117dp">
+                        android:layout_height="117dp"
+                        app:cardCornerRadius="7dp">
 
                         <TextView
                             android:id="@+id/title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/imageView4"
+                            android:layout_toEndOf="@+id/profile_image"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -280,14 +293,16 @@
                             android:textColor="#666"
                             android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView4"
-                            android:layout_width="110dp"
-                            android:layout_height="117dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/dokter_5" />
+                            android:layout_marginStart="11dp"
+                            android:src="@drawable/dokter_5"
+                            app:civ_border_color="@color/textblue"
+                            app:civ_border_width="1dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
@@ -295,7 +310,8 @@
                     android:id="@+id/card_view_rshs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="7dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -306,7 +322,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/imageView5"
+                            android:layout_toEndOf="@+id/profile_image"
                             android:fontFamily="@font/abeezee"
                             android:maxLines="3"
                             android:padding="8dp"
@@ -341,14 +357,16 @@
                             android:textColor="#666"
                             android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="110dp"
-                            android:layout_height="117dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/dokter_6" />
+                            android:layout_marginStart="11dp"
+                            android:src="@drawable/dokter_6"
+                            app:civ_border_color="@color/textblue"
+                            app:civ_border_width="1dp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
