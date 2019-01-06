@@ -30,6 +30,8 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Menu.this, "Maintenance", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Menu.this, DetailDokter.class);
+                startActivity(intent);
             }
         });
 
