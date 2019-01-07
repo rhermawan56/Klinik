@@ -23,7 +23,7 @@ public class RumahSakitActivity extends AppCompatActivity {
         startActivity(rumahsakit);
     }
 
-    public void BookingDokter(View v) {
+    public void Dokter(View v) {
         Intent bookingdokter = new Intent(RumahSakitActivity.this, BookingDokterActivity.class);
         startActivity(bookingdokter);
     }

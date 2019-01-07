@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,452 +19,456 @@
             app:cardCornerRadius="7dp"
             app:cardElevation="7dp">
 
-            <TextView
-                android:id="@+id/nama"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:fontFamily="@font/abeezee"
-                android:text="DOKTER"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/app_logo" />
+
+                <TextView
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="DOKTER"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ScrollView
-            android:id="@+id/scroll_view_hospitals"
+        <RelativeLayout
+            android:id="@+id/hospitals_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/linear_layout_hospitals">
+            android:layout_marginBottom="52dp">
 
-            <LinearLayout
+            <ScrollView
+                android:id="@+id/scroll_view_hospitals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_below="@+id/linear_layout_hospitals">
 
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/card_view_rshs"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="7dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <RelativeLayout
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_view_rshs"
                         android:layout_width="match_parent"
-                        android:layout_height="117dp">
-
-                        <TextView
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/profile_image"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="dr. Mille Milasari, Sp. B"
-                            android:textColor="#222"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/textView3"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Rumah Sakit Hasan Sadikin"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/title"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Dokter Bedah"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="104dp"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="11dp"
-                            android:src="@drawable/dokter_3"
-                            app:civ_border_color="@color/textblue"
-                            app:civ_border_width="1dp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/card_view_rshs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="7dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="117dp">
-
-                        <TextView
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/profile_image"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="dr. Kevin Irwan, Sp. KG"
-                            android:textColor="#222"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/textView3"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Rumah Sakit Hasan Sadikin"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/title"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Dokter Gigi"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="104dp"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="11dp"
-                            android:src="@drawable/dokter_1"
-                            app:civ_border_color="@color/textblue"
-                            app:civ_border_width="1dp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/card_view_rshs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="7dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="117dp">
-
-                        <TextView
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/profile_image"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="dr. Nina Natalia, Sp. A"
-                            android:textColor="#222"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/textView3"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Rumah Sakit Umum Avisena"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/title"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Dokter Anak"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="104dp"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="11dp"
-                            android:src="@drawable/dokter_4"
-                            app:civ_border_color="@color/textblue"
-                            app:civ_border_width="1dp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/card_view_rshs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="7dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="117dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
                         app:cardCornerRadius="7dp">
 
-                        <TextView
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/profile_image"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="dr. Rachelia Salanti"
-                            android:textColor="#222"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="117dp">
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/textView3"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Rumah Sakit Umum Avisena"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/profile_image"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="dr. Mille Milasari, Sp. B"
+                                android:textColor="#222"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/title"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Dokter Umum"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/textView3"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Rumah Sakit Hasan Sadikin"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="104dp"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="11dp"
-                            android:src="@drawable/dokter_5"
-                            app:civ_border_color="@color/textblue"
-                            app:civ_border_width="1dp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/title"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Dokter Bedah"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
 
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/card_view_rshs"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="7dp">
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="104dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/dokter_3"
+                                app:civ_border_color="@color/textblue"
+                                app:civ_border_width="1dp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
 
-                    <RelativeLayout
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_view_rshs"
                         android:layout_width="match_parent"
-                        android:layout_height="117dp">
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="7dp">
 
-                        <TextView
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_toEndOf="@+id/profile_image"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="dr. Puji Ichtiarti, Sp. OG"
-                            android:textColor="#222"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="117dp">
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/textView3"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Klinik Utama Handayani"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/profile_image"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="dr. Kevin Irwan, Sp. KG"
+                                android:textColor="#222"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignStart="@+id/title"
-                            android:layout_below="@+id/title"
-                            android:fontFamily="@font/abeezee"
-                            android:maxLines="3"
-                            android:padding="8dp"
-                            android:text="Dokter Kandungan"
-                            android:textColor="#666"
-                            android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/textView3"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Rumah Sakit Hasan Sadikin"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/profile_image"
-                            android:layout_width="104dp"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginStart="11dp"
-                            android:src="@drawable/dokter_6"
-                            app:civ_border_color="@color/textblue"
-                            app:civ_border_width="1dp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-        </ScrollView>
-    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/title"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Dokter Gigi"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="104dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/dokter_1"
+                                app:civ_border_color="@color/textblue"
+                                app:civ_border_width="1dp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_view_rshs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="117dp">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/profile_image"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="dr. Nina Natalia, Sp. A"
+                                android:textColor="#222"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/textView3"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Rumah Sakit Umum Avisena"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/title"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Dokter Anak"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="104dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/dokter_4"
+                                app:civ_border_color="@color/textblue"
+                                app:civ_border_width="1dp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_view_rshs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="117dp"
+                            app:cardCornerRadius="7dp">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/profile_image"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="dr. Rachelia Salanti"
+                                android:textColor="#222"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/textView3"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Rumah Sakit Umum Avisena"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/title"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Dokter Umum"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="104dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/dokter_5"
+                                app:civ_border_color="@color/textblue"
+                                app:civ_border_width="1dp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_view_rshs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="7dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="117dp">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/profile_image"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="dr. Puji Ichtiarti, Sp. OG"
+                                android:textColor="#222"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/textView3"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Klinik Utama Handayani"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/title"
+                                android:layout_below="@+id/title"
+                                android:fontFamily="@font/abeezee"
+                                android:maxLines="3"
+                                android:padding="8dp"
+                                android:text="Dokter Kandungan"
+                                android:textColor="#666"
+                                android:textSize="16dp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/profile_image"
+                                android:layout_width="104dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="11dp"
+                                android:src="@drawable/dokter_6"
+                                app:civ_border_color="@color/textblue"
+                                app:civ_border_width="1dp" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="15dp"
-            android:layout_alignParentBottom="true">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:weightSum="4">
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true">
 
                 <LinearLayout
-                    android:id="@+id/card_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:weightSum="4">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_home_30"
-                        android:onClick="Beranda"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:id="@+id/card_home"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Beranda"
-                        android:textAlignment="center"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="Beranda">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_rumah_sakit_30"
-                        android:onClick="RumahSakit"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_sm_home_30" />
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Rumah Sakit"
-                        android:textAlignment="center"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="RumahSakit">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_booking_dokter_30"
-                        android:onClick="BookingDokter"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_sm_rumah_sakit_30" />
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Booking"
-                        android:textAlignment="center"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="Dokter">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:src="@drawable/ic_sm_info_user_30"
-                        android:onClick="InfoAkun"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_sm_booking_dokter_30" />
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Info"
-                        android:textAlignment="center"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="InfoAkun">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_sm_info_user_30" />
+
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
     </RelativeLayout>
-
 </LinearLayout>

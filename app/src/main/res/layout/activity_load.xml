@@ -9,27 +9,28 @@
     android:background="@color/coloractivity"
     tools:context=".Load">
 
+    <ImageView
+        android:id="@+id/loadlogo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/app_logo"
+        app:srcCompat="@drawable/app_logo" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clinic Solution"
+        android:text="MediCare"
         android:textSize="24dp"
         android:textColor="@color/textblue"
         android:textStyle="bold|italic"
         android:textAlignment="center" />
 
     <ImageView
-        android:id="@+id/loadlogo"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ic_local_hospital"/>
-
-    <ImageView
         android:id="@+id/load"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/google_logo" />
 
 </LinearLayout>
