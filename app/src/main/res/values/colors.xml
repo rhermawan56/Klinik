@@ -8,4 +8,7 @@
     <color name="colorblack">#000000</color>
     <color name="colorchange">#f1f1ec</color>
     <color name="textwhite">#ffffff</color>
+    <color name="colorbutton">#00ffffff</color>
+    <color name="itemclick">#6eb7f5</color>
+    <color name="warningcolor">#f70529</color>
 </resources>

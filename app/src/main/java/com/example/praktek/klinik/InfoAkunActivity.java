@@ -19,11 +19,8 @@ public class InfoAkunActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_akun);
         home = (CardView) findViewById(R.id.info_cardhome);
         nama = (TextView) findViewById(R.id.info_nama);
-        nama.setText(ModalLogin.get_Nama());
         email = (TextView) findViewById(R.id.info_email);
-        email.setText(ModalLogin.get_Email());
         tlp = (TextView) findViewById(R.id.info_tlp);
-        tlp.setText(ModalLogin.get_Notlp());
         logout = (CardView) findViewById(R.id.info_btnlogout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

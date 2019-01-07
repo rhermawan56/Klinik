@@ -20,7 +20,7 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         name = (TextView) findViewById(R.id.nama);
-        name.setText(ModalLogin.get_Nama());
+        name.setText(ModalLogin.get_nama());
         beranda = (CardView) findViewById(R.id.menu_cardberanda);
         rs = (CardView) findViewById(R.id.menu_cardklinik);
         boking = (CardView) findViewById(R.id.menu_cardboking);

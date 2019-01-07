@@ -10,68 +10,113 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_local_hospital"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:layout_toRightOf="@+id/logo"
-            android:textColor="@color/textblue"
-            android:text="LOGIN"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
-
-        <EditText
-            android:id="@+id/email"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Email"
-            android:layout_above="@+id/password"/>
-
-        <EditText
-            android:id="@+id/password"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_local_hospital"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textColor="@color/textblue"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="Password"
-            android:layout_above="@+id/buttonin"
-            android:layout_marginBottom="70dp"/>
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Email"
+                    android:textColor="@color/colorblack"/>
 
-            <Button
-                android:id="@+id/buttonin"
+                <EditText
+                    android:id="@+id/login_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="Passsword"
+                    android:textColor="@color/colorblack"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/background_button"
-                android:text="Login"
-                android:layout_above="@+id/buttoncreate"/>
+                android:layout_alignParentBottom="true"
+                android:columnCount="2"
+                android:rowCount="1"
+                android:layout_marginBottom="10dp">
 
-            <Button
-                android:id="@+id/buttoncreate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_button"
-                android:text="Create Account"
-                android:layout_alignParentBottom="true"/>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/login_cardlogin"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/textblue"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textwhite"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/colorbutton" />
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/login_cardcreate"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/textblue"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Account"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textwhite"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@color/colorbutton"/>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
+        </RelativeLayout>
     </RelativeLayout>
-
 </LinearLayout>
