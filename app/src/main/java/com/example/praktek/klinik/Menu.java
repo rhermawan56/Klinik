@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 public class Menu extends AppCompatActivity {
 
     TextView name;
-    CardView beranda, rs, boking, akun;
+    CardView rs, dokter, akun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +22,9 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         name = (TextView) findViewById(R.id.nama);
         name.setText(ModalLogin.get_nama());
-        beranda = (CardView) findViewById(R.id.menu_cardberanda);
-        rs = (CardView) findViewById(R.id.menu_cardklinik);
-        boking = (CardView) findViewById(R.id.menu_cardboking);
+        rs = (CardView) findViewById(R.id.menu_cardrs);
+        dokter = (CardView) findViewById(R.id.menu_carddokter);
         akun = (CardView) findViewById(R.id.menu_cardakun);
-
-        beranda.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Menu.this, "Maintenance", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Menu.this, DetailDokter.class);
-                startActivity(intent);
-            }
-        });
 
         rs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,10 +34,10 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        boking.setOnClickListener(new View.OnClickListener() {
+        dokter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu.this,BookingDokterActivity.class);
+                Intent intent = new Intent(Menu.this, BookingDokterActivity.class);
                 startActivity(intent);
             }
         });
