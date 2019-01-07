@@ -33,153 +33,38 @@
 
         </android.support.v7.widget.CardView>
     </RelativeLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
+        android:layout_marginBottom="5dp">
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardElevation="15dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="@color/textblue">
-
-            <GridLayout
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="15dp">
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="2"
-                android:rowCount="2">
+                android:layout_height="match_parent">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="1"
+                    android:rowCount="3"
+                    android:layout_margin="5dp">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_row="1"
+                        android:layout_columnWeight="1"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/textblue"
+                        app:cardCornerRadius="15dp"
+                        android:layout_margin="10dp">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_cardberanda"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="15dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical|center_horizontal">
-                        <ImageView
-                            android:layout_width="65dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_sm_home_30"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Beranda"/>
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_cardklinik"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    app:cardElevation="15dp"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-                        android:layout_width="65dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_horizontal|center_vertical">
-
-                        <ImageView
-                            android:layout_width="65dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_sm_rumah_sakit_30"
-                            android:layout_gravity="center"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Rumah Sakit"
-                            android:textAlignment="center"/>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_cardboking"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    app:cardElevation="15dp"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-                        android:layout_width="65dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_horizontal|center_vertical">
-
-                        <ImageView
-                            android:layout_width="65dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_sm_booking_dokter_30"
-                            android:layout_gravity="center"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Booking"
-                            android:textAlignment="center"/>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_cardakun"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="10dp"
-                    app:cardElevation="15dp"
-                    app:cardCornerRadius="15dp">
-
-                    <LinearLayout
-                        android:layout_width="65dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_horizontal|center_vertical">
-
-                        <ImageView
-                            android:layout_width="65dp"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_sm_info_user_30"
-                            android:layout_gravity="center"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Info Akun"
-                            android:textAlignment="center"/>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-            </GridLayout>
-
-
+                    </android.support.v7.widget.CardView>
+                </GridLayout>
+            </ScrollView>
         </android.support.v7.widget.CardView>
-
-    </LinearLayout>
-
+    </RelativeLayout>
 </LinearLayout>

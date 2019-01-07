@@ -8,96 +8,134 @@
     android:background="@color/coloractivity"
     tools:context=".Create">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center" >
-
-        <ImageView
-            android:id="@+id/create_logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_local_hospital"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:layout_toRightOf="@+id/create_logo"
-            android:textColor="@color/textblue"
-            android:text="Create Account"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="75dp">
-
-        <EditText
-            android:id="@+id/create_nama"
-            android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="25dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_local_hospital"/>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Nama"/>
-
-        <EditText
-            android:id="@+id/create_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/create_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="Password"/>
-
-        <EditText
-            android:id="@+id/create_password2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="Confirm Password"/>
-
-        <EditText
-            android:id="@+id/create_tlp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone"
-            android:hint="No Telepon/ No Hp"/>
+            android:text="Buat Akun"
+            android:layout_marginLeft="10dp"
+            android:textSize="25dp"
+            android:textColor="@color/textblue"
+            android:textStyle="bold"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/createbtn_create"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Create"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/background_button"/>
-
-        <Button
-            android:id="@+id/createbtn_cancel"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/createbtn_create"
-            android:layout_marginLeft="10dp"
-            android:text="Cancel"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/background_button"/>
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <EditText
+                        android:id="@+id/create_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:hint="Nama"
+                        android:textColor="@color/colorblack"/>
+                    <EditText
+                        android:id="@+id/create_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:hint="email@example.com"
+                        android:textColor="@color/colorblack"/>
+                    <EditText
+                        android:id="@+id/create_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:hint="Kata Sandi"
+                        android:textColor="@color/colorblack"/>
+                    <EditText
+                        android:id="@+id/create_conpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:hint="Konfirmasi Kata Sandi"
+                        android:textColor="@color/colorblack"/>
+                    <EditText
+                        android:id="@+id/create_tlp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:hint="No.Telepon"/>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:columnCount="2"
+                android:rowCount="1"
+                android:layout_marginBottom="5dp">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/create_cardcreate"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="@color/textblue"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Buat Akun"
+                        android:textColor="@color/textwhite"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/create_cardcancel"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="@color/textblue"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Batal"
+                        android:textColor="@color/textwhite"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
+        </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
