@@ -16,6 +16,8 @@ public class Login extends AppCompatActivity {
     EditText email, pass;
     CardView login, create;
     private String Semail, Spass;
+    private long backPressedTime;
+    private Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,4 +55,17 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+     @Override
+     public void onBackPressed(){
+        if (backPressedTime + 2000 > System.currentTimeMillis()){
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(Login.this, "Ketuk dua kali untuk keluar", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        backPressedTime = System.currentTimeMillis();
+     }
 }

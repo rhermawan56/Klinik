@@ -70,7 +70,9 @@
                     android:orientation="vertical">
 
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/card_view_rshs"
+                        android:id="@+id/dokter_card1"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
@@ -81,11 +83,11 @@
                             android:layout_height="117dp">
 
                             <TextView
-                                android:id="@+id/title"
+                                android:id="@+id/card1_title1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/profile_image"
+                                android:layout_toEndOf="@+id/profileimage1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -95,11 +97,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/card1_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/textView3"
+                                android:layout_alignStart="@+id/card1_title1"
+                                android:layout_below="@+id/card1_text2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -108,11 +110,11 @@
                                 android:textSize="16dp" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/card1_text2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/title"
+                                android:layout_alignStart="@+id/card1_title1"
+                                android:layout_below="@+id/card1_title1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -121,7 +123,7 @@
                                 android:textSize="16dp" />
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image"
+                                android:id="@+id/profileimage1"
                                 android:layout_width="104dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
@@ -134,7 +136,9 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/card_view_rshs"
+                        android:id="@+id/dokter_card2"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
@@ -145,11 +149,11 @@
                             android:layout_height="117dp">
 
                             <TextView
-                                android:id="@+id/title"
+                                android:id="@+id/card2_title1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/profile_image"
+                                android:layout_toEndOf="@+id/profileimage2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -159,11 +163,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/card2_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/textView3"
+                                android:layout_alignStart="@+id/card2_title1"
+                                android:layout_below="@+id/card2_text2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -172,11 +176,11 @@
                                 android:textSize="16dp" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/card2_text2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/title"
+                                android:layout_alignStart="@+id/card2_title1"
+                                android:layout_below="@+id/card2_title1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -185,7 +189,7 @@
                                 android:textSize="16dp" />
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image"
+                                android:id="@+id/profileimage2"
                                 android:layout_width="104dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
@@ -198,7 +202,9 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/card_view_rshs"
+                        android:id="@+id/dokter_card3"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
@@ -209,11 +215,11 @@
                             android:layout_height="117dp">
 
                             <TextView
-                                android:id="@+id/title"
+                                android:id="@+id/card3_title1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/profile_image"
+                                android:layout_toEndOf="@+id/profileimage3"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -223,11 +229,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/card3_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/textView3"
+                                android:layout_alignStart="@+id/card3_title1"
+                                android:layout_below="@+id/card3_text2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -236,11 +242,11 @@
                                 android:textSize="16dp" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/card3_text2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/title"
+                                android:layout_alignStart="@+id/card3_title1"
+                                android:layout_below="@+id/card3_title1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -249,7 +255,7 @@
                                 android:textSize="16dp" />
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image"
+                                android:id="@+id/profileimage3"
                                 android:layout_width="104dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
@@ -262,7 +268,9 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/card_view_rshs"
+                        android:id="@+id/dokter_card4"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
@@ -270,15 +278,14 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="117dp"
-                            app:cardCornerRadius="7dp">
+                            android:layout_height="117dp">
 
                             <TextView
-                                android:id="@+id/title"
+                                android:id="@+id/card4_title1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/profile_image"
+                                android:layout_toEndOf="@+id/profileimage4"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -288,11 +295,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/card4_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/textView3"
+                                android:layout_alignStart="@+id/card4_title1"
+                                android:layout_below="@+id/card4_text2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -301,11 +308,11 @@
                                 android:textSize="16dp" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/card4_text2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/title"
+                                android:layout_alignStart="@+id/card4_title1"
+                                android:layout_below="@+id/card4_title1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -314,7 +321,7 @@
                                 android:textSize="16dp" />
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image"
+                                android:id="@+id/profileimage4"
                                 android:layout_width="104dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
@@ -327,7 +334,9 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:id="@+id/card_view_rshs"
+                        android:id="@+id/dokter_card5"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
@@ -338,11 +347,11 @@
                             android:layout_height="117dp">
 
                             <TextView
-                                android:id="@+id/title"
+                                android:id="@+id/card5_title1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/profile_image"
+                                android:layout_toEndOf="@+id/profileimage5"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -352,11 +361,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/card5_text1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/textView3"
+                                android:layout_alignStart="@+id/card5_title1"
+                                android:layout_below="@+id/card5_text2"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -365,11 +374,11 @@
                                 android:textSize="16dp" />
 
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/card5_text2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignStart="@+id/title"
-                                android:layout_below="@+id/title"
+                                android:layout_alignStart="@+id/card5_title1"
+                                android:layout_below="@+id/card5_title1"
                                 android:fontFamily="@font/abeezee"
                                 android:maxLines="3"
                                 android:padding="8dp"
@@ -378,7 +387,7 @@
                                 android:textSize="16dp" />
 
                             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:id="@+id/profile_image"
+                                android:id="@+id/profileimage5"
                                 android:layout_width="104dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
@@ -392,83 +401,124 @@
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <android.support.v7.widget.CardView
+            <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="1"
                 android:layout_alignParentBottom="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:weightSum="4">
-
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dokter_cardberanda"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="5dp">
                     <LinearLayout
-                        android:id="@+id/card_home"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:onClick="Beranda">
-
+                        android:gravity="center"
+                        android:orientation="vertical">
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="3dp"
-                            android:src="@drawable/ic_sm_home_30" />
-
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_sm_home_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beranda"
+                            android:textSize="8dp"/>
                     </LinearLayout>
-
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dokter_cardrs"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="5dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:onClick="RumahSakit">
-
+                        android:gravity="center"
+                        android:orientation="vertical">
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="3dp"
-                            android:src="@drawable/ic_sm_rumah_sakit_30" />
-
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_sm_rumah_sakit_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rumah Sakit"
+                            android:textSize="8dp"/>
                     </LinearLayout>
-
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dokter_carddokter"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="5dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:onClick="Dokter">
-
+                        android:gravity="center"
+                        android:orientation="vertical">
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="3dp"
-                            android:src="@drawable/ic_sm_booking_dokter_30" />
-
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_sm_booking_dokter_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dokter"
+                            android:textSize="8dp"/>
                     </LinearLayout>
-
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dokter_cardakun"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="5dp">
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:onClick="InfoAkun">
-
+                        android:gravity="center"
+                        android:orientation="vertical">
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="3dp"
-                            android:src="@drawable/ic_sm_info_user_30" />
-
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_sm_info_user_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Akun"
+                            android:textSize="8dp"/>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
         </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
