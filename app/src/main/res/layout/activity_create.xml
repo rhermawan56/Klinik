@@ -16,13 +16,13 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_local_hospital"/>
+            android:src="@drawable/app_logo"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buat Akun"
             android:layout_marginLeft="10dp"
-            android:textSize="25dp"
+            android:textSize="24dp"
             android:textColor="@color/textblue"
             android:textStyle="bold"/>
     </LinearLayout>
