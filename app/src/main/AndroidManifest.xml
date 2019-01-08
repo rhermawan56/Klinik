@@ -30,7 +30,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".DetailDokter"></activity>
+        <activity android:name=".DetailDokter" />
+        <activity android:name=".detailRS"></activity>
     </application>
 
 </manifest>
