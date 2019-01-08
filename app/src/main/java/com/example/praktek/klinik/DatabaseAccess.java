@@ -9,6 +9,9 @@ import android.provider.ContactsContract;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DatabaseAccess {
     private SQLiteOpenHelper openHelper;
     private SQLiteDatabase db;
@@ -79,7 +82,7 @@ public class DatabaseAccess {
     public Boolean getDataRS(String id){
         try {
             db = openHelper.getReadableDatabase();
-            Cursor cursor = db.rawQuery("select * from rumahsakit where idrs = ?", new String[]{id});
+            Cursor cursor = db.rawQuery("select * from rumahsakit where namars = ?", new String[]{id});
             if (cursor.moveToNext()){
                 ModalRs modalRs = new ModalRs();
                 modalRs.set_id(cursor.getString(0));
