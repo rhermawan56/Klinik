@@ -75,4 +75,23 @@ public class DatabaseAccess {
             db.insert("user", null, content);
         }catch (Exception e){ }
     }
+
+    public Boolean getDataRS(String id){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from rumahsakit where idrs = ?", new String[]{id});
+            if (cursor.moveToNext()){
+                ModalRs modalRs = new ModalRs();
+                modalRs.set_id(cursor.getString(0));
+                modalRs.set_namars(cursor.getString(1));
+                modalRs.set_alamat(cursor.getString(2));
+                modalRs.set_telp(cursor.getString(3));
+                return true;
+            } else {
+                return false;
+            }
+        }catch (Exception e){
+            return false;
+        }
+    }
 }

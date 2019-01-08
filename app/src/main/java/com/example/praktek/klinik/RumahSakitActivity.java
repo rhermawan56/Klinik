@@ -12,7 +12,7 @@ import com.beardedhen.androidbootstrap.BootstrapButton;
 public class RumahSakitActivity extends AppCompatActivity {
 
     BootstrapButton detailrs1, detailrs2, detailrs3;
-    CardView beranda, rs, dokter, akun;
+    CardView beranda, dokter, akun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,6 @@ public class RumahSakitActivity extends AppCompatActivity {
         detailrs2 = (BootstrapButton) findViewById(R.id.detail2);
         detailrs3 = (BootstrapButton) findViewById(R.id.detail3);
         beranda = (CardView) findViewById(R.id.rs_cardberanda);
-        rs = (CardView) findViewById(R.id.rs_cardrs);
         dokter = (CardView) findViewById(R.id.rs_carddokter);
         akun = (CardView) findViewById(R.id.rs_cardakun);
 
@@ -49,5 +48,46 @@ public class RumahSakitActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        detailrs1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = "1";
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataRS(id);
+                if (getDataRS == true){
+                    intentDetail();
+                }
+            }
+        });
+
+        detailrs2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = "2";
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataRS(id);
+                if (getDataRS == true){
+                    intentDetail();
+                }
+            }
+        });
+
+        detailrs3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String id = "3";
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataRS(id);
+                if (getDataRS == true) {
+                    intentDetail();
+                }
+            }
+        });
+    }
+
+    private void intentDetail(){
+        Intent intent = new Intent(RumahSakitActivity.this, detailRS.class);
+        startActivity(intent);
     }
 }
