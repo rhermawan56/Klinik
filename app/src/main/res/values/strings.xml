@@ -10,4 +10,5 @@
 
     <string name="hospital_name3">Klinik Utama Handayani</string>
     <string name="hospital_description3">Jl. Gunung Batu No.7, Sukaraja, Cicendo, Kota Bandung, Jawa Barat 40175</string>
+    <string name="title_activity_history_booking">HistoryBookingActivity</string>
 </resources>
