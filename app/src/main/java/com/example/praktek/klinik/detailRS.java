@@ -103,4 +103,9 @@ public class detailRS extends AppCompatActivity {
         kos.set_dokter("");
         kos.set_poli("");
     }
+
+    public void BackToHospital(View v) {
+        Intent backtohoapital = new Intent(detailRS.this, RumahSakitActivity.class);
+        startActivity(backtohoapital );
+    }
 }
