@@ -31,7 +31,12 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".DetailDokter" />
-        <activity android:name=".detailRS"></activity>
+        <activity android:name=".detailRS" />
+        <activity android:name=".DetailAkunActivity" />
+        <activity
+            android:name=".HistoryBookingActivity"
+            android:label="@string/title_activity_history_booking"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
