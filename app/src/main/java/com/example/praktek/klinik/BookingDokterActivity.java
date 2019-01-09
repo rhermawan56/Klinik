@@ -20,7 +20,7 @@ public class BookingDokterActivity extends AppCompatActivity {
         card3 = (CardView) findViewById(R.id.dokter_card3);
         card4 = (CardView) findViewById(R.id.dokter_card4);
         card5 = (CardView) findViewById(R.id.dokter_card5);
-        beranda = (CardView) findViewById(R.id.dokter_cardakun);
+        beranda = (CardView) findViewById(R.id.dokter_cardberanda);
         rs = (CardView) findViewById(R.id.dokter_cardrs);
         akun = (CardView) findViewById(R.id.dokter_cardakun);
 
