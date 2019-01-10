@@ -48,4 +48,9 @@ public class DetailDokter extends AppCompatActivity {
             }
         });
     }
+
+    public void BackToDokter(View v) {
+        Intent backtodokter = new Intent(DetailDokter.this, BookingDokterActivity.class);
+        startActivity(backtodokter);
+    }
 }

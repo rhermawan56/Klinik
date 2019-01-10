@@ -26,7 +26,8 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_back" />
+                    android:src="@drawable/ic_back"
+                    android:onClick="BackToDokter"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
