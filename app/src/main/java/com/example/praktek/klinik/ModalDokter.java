@@ -2,11 +2,11 @@ package com.example.praktek.klinik;
 
 public class ModalDokter {
 
-    public static int _id;
-    public static String _namadokter, _namars, _polikolinik;
+    public static Integer _id;
+    public static String _namadokter, _namars, _polikolinik, _jadwalpraktek, _jampraktek;
 
     //method setter
-    public void set_id(int _id) {
+    public void set_id(Integer _id) {
         this._id = _id;
     }
     public void set_namadokter(String _namadokter) {
@@ -17,6 +17,12 @@ public class ModalDokter {
     }
     public void set_polikolinik(String _polikolinik) {
         this._polikolinik = _polikolinik;
+    }
+    public void set_jadwalpraktek(String _jadwalpraktek) {
+        this._jadwalpraktek = _jadwalpraktek;
+    }
+    public void set_jampraktek(String _jampraktek) {
+        this._jampraktek = _jampraktek;
     }
 
     //metod getter
@@ -31,5 +37,11 @@ public class ModalDokter {
     }
     public static String get_polikolinik(){
         return _polikolinik;
+    }
+    public static String get_jadwalpraktek() {
+        return _jadwalpraktek;
+    }
+    public static String get_jampraktek() {
+        return _jampraktek;
     }
 }

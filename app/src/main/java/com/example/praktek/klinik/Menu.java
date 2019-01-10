@@ -17,8 +17,8 @@ public class Menu extends AppCompatActivity {
 
     TextView name;
     CardView rs, dokter, akun;
-    private long backPressedTime;
-    private Toast backToast;
+    private static long backPressedTime;
+    private static Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +70,8 @@ public class Menu extends AppCompatActivity {
                         modalLogin.set_password("");
                         modalLogin.set_nama("");
                         modalLogin.set_notlp("");
-                        Menu.this.finish();
+                        Intent intent = new Intent(Menu.this, Login.class);
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
@@ -83,9 +84,11 @@ public class Menu extends AppCompatActivity {
         alertDialog.show();
     }
 
+    //
+
     @Override
-    public void onBackPressed(){
-        if (backPressedTime + 2000 > System.currentTimeMillis()){
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
             backToast.cancel();
             showDialog();
             return;

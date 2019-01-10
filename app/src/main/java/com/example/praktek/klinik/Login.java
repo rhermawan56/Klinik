@@ -3,6 +3,7 @@ package com.example.praktek.klinik;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -43,7 +44,7 @@ public class Login extends AppCompatActivity {
                 Spass = pass.getText().toString();
                 DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
                 boolean Log = db.login(Semail, Spass);
-                if (Log == true){
+                if (Log == true) {
                     Toast.makeText(Login.this, "Login Sukses", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, Menu.class);
                     startActivity(intent);
@@ -56,16 +57,17 @@ public class Login extends AppCompatActivity {
         });
     }
 
-     @Override
-     public void onBackPressed(){
-        if (backPressedTime + 2000 > System.currentTimeMillis()){
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
             backToast.cancel();
-            super.onBackPressed();
+            ActivityCompat.finishAffinity(Login.this);
+            System.exit(0);
             return;
         } else {
             backToast = Toast.makeText(Login.this, "Ketuk dua kali untuk keluar", Toast.LENGTH_SHORT);
             backToast.show();
         }
         backPressedTime = System.currentTimeMillis();
-     }
+    }
 }

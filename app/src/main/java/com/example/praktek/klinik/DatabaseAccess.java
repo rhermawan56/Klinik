@@ -82,13 +82,37 @@ public class DatabaseAccess {
     public Boolean getDataRS(String id){
         try {
             db = openHelper.getReadableDatabase();
-            Cursor cursor = db.rawQuery("select * from rumahsakit where namars = ?", new String[]{id});
+            Cursor cursor = db.rawQuery("select * from rumahsakit where idrs = ?", new String[]{id});
             if (cursor.moveToNext()){
                 ModalRs modalRs = new ModalRs();
                 modalRs.set_id(cursor.getString(0));
                 modalRs.set_namars(cursor.getString(1));
                 modalRs.set_alamat(cursor.getString(2));
                 modalRs.set_telp(cursor.getString(3));
+                return true;
+            } else {
+                return false;
+            }
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    public Boolean getDataDokter(Integer id){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from dokter where iddok = ?",
+                    new String[]{String.valueOf(id)});
+            if (cursor.moveToFirst()){
+                do {
+                    ModalDokter modalDokter = new ModalDokter();
+                    modalDokter.set_id(cursor.getInt(0));
+                    modalDokter.set_namadokter(cursor.getString(1));
+                    modalDokter.set_namars(cursor.getString(2));
+                    modalDokter.set_polikolinik(cursor.getString(3));
+                    modalDokter.set_jadwalpraktek(cursor.getString(4));
+                    modalDokter.set_jampraktek(cursor.getString(5));
+                } while (cursor.moveToNext());
                 return true;
             } else {
                 return false;

@@ -52,7 +52,7 @@ public class RumahSakitActivity extends AppCompatActivity {
         detailrs1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nama = "Rumah Sakit Hasan Sadikin";
+                String nama = "4";
                 DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
                 boolean getDataRS = db.getDataRS(nama);
                 if (getDataRS == true){
@@ -64,7 +64,7 @@ public class RumahSakitActivity extends AppCompatActivity {
         detailrs2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nama = "Rumah Sakit Umum Avisena";
+                String nama = "6";
                 DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
                 boolean getDataRS = db.getDataRS(nama);
                 if (getDataRS == true){
@@ -76,7 +76,7 @@ public class RumahSakitActivity extends AppCompatActivity {
         detailrs3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nama = "Klinik Utama Handayani";
+                String nama = "8";
                 DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
                 boolean getDataRS = db.getDataRS(nama);
                 if (getDataRS == true) {

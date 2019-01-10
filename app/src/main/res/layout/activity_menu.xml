@@ -14,20 +14,18 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
-            app:cardElevation="5dp">
+            android:layout_margin="5dp">
 
             <TextView
                 android:id="@+id/nama"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="12dp"
                 android:fontFamily="@font/abeezee"
-                android:layout_toRightOf="@+id/person"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="10dp"
                 android:text="Pemilik Akun"
                 android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
                 android:textSize="12sp"/>
 
         </android.support.v7.widget.CardView>
@@ -36,110 +34,110 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="5dp">
-            <ScrollView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <GridLayout
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="3"
+                android:layout_margin="5dp"
+                android:layout_gravity="center">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu_cardrs"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:columnCount="1"
-                    android:rowCount="3"
-                    android:layout_margin="5dp"
-                    android:layout_gravity="center">
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/menu_cardrs"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="#f7f5f5">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_row="1"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="7dp"
-                        app:cardCornerRadius="15dp"
-                        android:layout_margin="15dp"
-                        app:cardBackgroundColor="#f7f5f5">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:layout_margin="15dp">
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/ic_sm_rumah_sakit_30"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="RUMAH SAKIT"
-                                android:textSize="25dp"
-                                android:textStyle="bold"
-                                android:textColor="#434341"
-                                android:layout_marginLeft="20dp"/>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/menu_carddokter"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_margin="15dp">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_sm_rumah_sakit_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RUMAH SAKIT"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:textColor="#434341"
+                            android:layout_marginLeft="20dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu_carddokter"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="#f7f5f5">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_row="1"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="7dp"
-                        app:cardCornerRadius="15dp"
-                        android:layout_margin="15dp"
-                        app:cardBackgroundColor="#f7f5f5">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:layout_margin="15dp">
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/ic_sm_booking_dokter_30"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="DOKTER"
-                                android:textSize="25dp"
-                                android:textStyle="bold"
-                                android:textColor="#434341"
-                                android:layout_marginLeft="20dp"/>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/menu_cardakun"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_margin="15dp">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_sm_booking_dokter_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DOKTER"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:textColor="#434341"
+                            android:layout_marginLeft="20dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu_cardakun"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_row="1"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="#f7f5f5">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_row="1"
-                        android:layout_columnWeight="1"
-                        app:cardElevation="7dp"
-                        app:cardCornerRadius="15dp"
-                        android:layout_margin="15dp"
-                        app:cardBackgroundColor="#f7f5f5">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:layout_margin="15dp">
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/ic_sm_info_user_30"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="AKUN"
-                                android:textSize="25dp"
-                                android:textStyle="bold"
-                                android:textColor="#434341"
-                                android:layout_marginLeft="20dp"/>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </GridLayout>
-            </ScrollView>
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_margin="15dp">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_sm_info_user_30"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AKUN"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            android:textColor="#434341"
+                            android:layout_marginLeft="20dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
+        </ScrollView>
     </RelativeLayout>
 </LinearLayout>

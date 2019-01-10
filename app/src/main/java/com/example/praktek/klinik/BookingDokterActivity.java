@@ -27,35 +27,60 @@ public class BookingDokterActivity extends AppCompatActivity {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Integer id = 1101;
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataDokter(id);
+                if (getDataRS == true){
+                    IntentDetail();
+                } else {}
             }
         });
 
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Integer id = 1102;
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataDokter(id);
+                if (getDataRS == true){
+                    IntentDetail();
+                } else {}
             }
         });
 
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Integer id = 1201;
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataDokter(id);
+                if (getDataRS == true){
+                    IntentDetail();
+                } else {}
             }
         });
 
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Integer id = 1202;
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataDokter(id);
+                if (getDataRS == true){
+                    IntentDetail();
+                } else {}
             }
         });
 
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Integer id = 1301;
+                DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
+                boolean getDataRS = db.getDataDokter(id);
+                if (getDataRS == true){
+                    IntentDetail();
+                } else {}
             }
         });
 
@@ -82,5 +107,10 @@ public class BookingDokterActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void IntentDetail(){
+        Intent intent = new Intent(BookingDokterActivity.this, DetailDokter.class);
+        startActivity(intent);
     }
 }
