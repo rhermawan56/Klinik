@@ -15,49 +15,45 @@ import java.util.zip.Inflater;
 
 public class InfoAkunActivity extends AppCompatActivity {
 
-    CardView home, logout, beranda, rs, dokter;
-    TextView nama, email, tlp;
-    private View convertView;
-    private LayoutInflater inflater;
-    private Activity activity;
+    CardView akun, riwayat, logout;
+    CardView home, rs, dokter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_akun);
-//        home = (CardView) findViewById(R.id.info_cardhome);
-        nama = (TextView) findViewById(R.id.info_nama);
-        email = (TextView) findViewById(R.id.info_email);
-        tlp = (TextView) findViewById(R.id.info_tlp);
+        akun = (CardView) findViewById(R.id.info_detailakun);
+        riwayat = (CardView) findViewById(R.id.info_riwayat);
         logout = (CardView) findViewById(R.id.info_btnlogout);
-        beranda = (CardView) findViewById(R.id.dokter_cardberanda);
-        rs = (CardView) findViewById(R.id.dokter_cardrs);
-        dokter = (CardView) findViewById(R.id.dokter_cardrs);
+        home = (CardView) findViewById(R.id.info_cardhome);
+        rs = (CardView) findViewById(R.id.info_cardrs);
+        dokter = (CardView) findViewById(R.id.info_carddokter);
 
+        akun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InfoAkunActivity.this, DetailAkunActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        riwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InfoAkunActivity.this, HistoryBookingActivity.class);
+                startActivity(intent);
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(InfoAkunActivity.this,"Logout Sukses",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(InfoAkunActivity.this,Load.class);
+                Intent intent = new Intent(InfoAkunActivity.this, Login.class);
                 startActivity(intent);
-                InfoAkunActivity.this.finish();
-                nama.setText("");
-                email.setText("");
-                tlp.setText("");
             }
         });
 
         home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(InfoAkunActivity.this, Menu.class);
-                startActivity(intent);
-            }
-        });
-
-        beranda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(InfoAkunActivity.this, Menu.class);
@@ -80,15 +76,5 @@ public class InfoAkunActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    public void GoToDetailAccount(View v) {
-        Intent gotodetailaccount = new Intent(InfoAkunActivity.this, DetailAkunActivity.class);
-        startActivity(gotodetailaccount);
-    }
-
-    public void GoToHistoryBooking(View v) {
-        Intent gotohistorybooking = new Intent(InfoAkunActivity.this, HistoryBookingActivity.class);
-        startActivity(gotohistorybooking);
     }
 }
