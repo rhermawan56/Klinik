@@ -1,23 +1,25 @@
 package com.example.praktek.klinik;
 
 public class ModalPoliAnak {
-    public static String _id, _idbooking, _namars, _namadok, _polidok;
+    public static Integer _id, _idbooking;
+    public static String _namars, _namadok, _polidok, _namaakun;
 
     //constructor
     public ModalPoliAnak(){}
-    public ModalPoliAnak(String _id, String _idbooking, String _namars, String _namadok, String _polidok){
+    public ModalPoliAnak(Integer _id, Integer _idbooking, String _namars, String _namadok, String _polidok, String _namaakun){
         this._id = _id;
         this._idbooking = _idbooking;
         this._namars = _namars;
         this._namadok = _namadok;
         this._polidok = _polidok;
+        this._namaakun = _namaakun;
     }
 
     //method setter
-    public void set_id(String _id) {
+    public void set_id(Integer _id) {
         this._id = _id;
     }
-    public void set_idbooking(String _idbooking) {
+    public void set_idbooking(Integer _idbooking) {
         this._idbooking = _idbooking;
     }
     public void set_namars(String _namars) {
@@ -29,12 +31,15 @@ public class ModalPoliAnak {
     public void set_polidok(String _polidok){
         this._polidok = _polidok;
     }
+    public void set_namaakun(String _namaakun){
+        this._namaakun = _namaakun;
+    }
 
     //method getter
-    public static String get_id(){
+    public static Integer get_id(){
         return _id;
     }
-    public static String get_idbooking(){
+    public static Integer get_idbooking(){
         return _idbooking;
     }
     public static String get_namars(){
@@ -45,5 +50,8 @@ public class ModalPoliAnak {
     }
     public static String get_polidok(){
         return _polidok;
+    }
+    public static String get_namaakun(){
+        return _namaakun;
     }
 }
