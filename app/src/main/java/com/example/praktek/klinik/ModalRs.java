@@ -16,7 +16,7 @@ public class ModalRs {
 
     //method setter
     public void set_id(String _id) {
-        this._id = _id;
+        this._id = _id; 
     }
     public void set_namars(String _namars) {
         this._namars = _namars;
