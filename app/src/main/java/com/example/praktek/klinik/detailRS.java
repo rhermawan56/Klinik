@@ -63,5 +63,12 @@ public class detailRS extends AppCompatActivity {
     public void BackToHospital(View v) {
         Intent backtohoapital = new Intent(detailRS.this, RumahSakitActivity.class);
         startActivity(backtohoapital );
+        detailRS.this.finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        detailRS.this.finish();
+        super.onBackPressed();
     }
 }

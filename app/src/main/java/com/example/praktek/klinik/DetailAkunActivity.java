@@ -16,5 +16,11 @@ public class DetailAkunActivity extends AppCompatActivity {
     public void BackToAkun(View v) {
         Intent backtoakun = new Intent(DetailAkunActivity.this, InfoAkunActivity.class);
         startActivity(backtoakun);
+        DetailAkunActivity.this.finish();
+    }
+
+    public void onBackPressed() {
+        DetailAkunActivity.this.finish();
+        super.onBackPressed();
     }
 }

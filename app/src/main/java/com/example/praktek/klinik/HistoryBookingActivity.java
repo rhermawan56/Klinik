@@ -6,6 +6,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HistoryBookingActivity extends AppCompatActivity {
 
@@ -37,6 +38,13 @@ public class HistoryBookingActivity extends AppCompatActivity {
     public void BackToAkun(View v) {
         Intent backtoakun = new Intent(HistoryBookingActivity.this, InfoAkunActivity.class);
         startActivity(backtoakun);
+        HistoryBookingActivity.this.finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        HistoryBookingActivity.this.finish();
+        super.onBackPressed();
     }
 
 }
