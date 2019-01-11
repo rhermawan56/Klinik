@@ -121,4 +121,74 @@ public class DatabaseAccess {
             return false;
         }
     }
+
+    public void createBedah(ModalPoliBedah modalPoliBedah){
+        try {
+            db = openHelper.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put("id", modalPoliBedah.get_id());
+            values.put("idboking", modalPoliBedah.get_idbooking());
+            values.put("namars", modalPoliBedah.get_namars());
+            values.put("namadok", modalPoliBedah.get_namadok());
+            values.put("namapoli", modalPoliBedah.get_polidok());
+            values.put("namaakun", modalPoliBedah.get_akun());
+            db.insert("polibedah", null, values);
+        } catch (Exception e){}
+    }
+
+    public Boolean readBedah(){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from polibedah",null);
+            cursor.moveToNext();
+            ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
+            modalPoliBedah.set_id(cursor.getInt(0));
+            modalPoliBedah.set_idbooking(cursor.getString(1));
+            modalPoliBedah.set_namars(cursor.getString(2));
+            modalPoliBedah.set_namadok(cursor.getString(3));
+            modalPoliBedah.set_polidok(cursor.getString(4));
+            modalPoliBedah.set_akun(cursor.getString(5));
+            return true;
+        }catch (Exception e){return false;}
+    }
+
+    public Boolean cekBedah(String email){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from polibedah where email = ?",null);
+            if (cursor.getCount()>0){
+                    return false;
+            } else {
+                ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
+                modalPoliBedah.set_id(cursor.getInt(0));
+                modalPoliBedah.set_idbooking(cursor.getString(1));
+                modalPoliBedah.set_namars(cursor.getString(2));
+                modalPoliBedah.set_namadok(cursor.getString(3));
+                modalPoliBedah.set_polidok(cursor.getString(4));
+                modalPoliBedah.set_akun(cursor.getString(5));
+                return true;
+            }
+        }catch (Exception e){return false;}
+    }
+
+    public Boolean cekBokingBedah(String email){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from polibedah where email = ?",null);
+            if (cursor.moveToFirst()){
+                do {
+                    ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
+                    modalPoliBedah.set_id(cursor.getInt(0));
+                    modalPoliBedah.set_idbooking(cursor.getString(1));
+                    modalPoliBedah.set_namars(cursor.getString(2));
+                    modalPoliBedah.set_namadok(cursor.getString(3));
+                    modalPoliBedah.set_polidok(cursor.getString(4));
+                    modalPoliBedah.set_akun(cursor.getString(5));
+                } while (cursor.moveToNext());
+                return true;
+            } else {
+                return false;
+            }
+        }catch (Exception e){return false;}
+    }
 }

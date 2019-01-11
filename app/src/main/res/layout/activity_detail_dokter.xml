@@ -23,6 +23,9 @@
                 android:layout_gravity="center_vertical">
 
                 <ImageView
+                    android:id="@+id/detaildokter_back"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="10dp"
