@@ -122,73 +122,77 @@ public class DatabaseAccess {
         }
     }
 
-    public void createBedah(ModalPoliBedah modalPoliBedah){
+    public void createHistory(ModalHistori histori){
         try {
             db = openHelper.getWritableDatabase();
             ContentValues values = new ContentValues();
-            values.put("id", modalPoliBedah.get_id());
-            values.put("idboking", modalPoliBedah.get_idbooking());
-            values.put("namars", modalPoliBedah.get_namars());
-            values.put("namadok", modalPoliBedah.get_namadok());
-            values.put("namapoli", modalPoliBedah.get_polidok());
-            values.put("namaakun", modalPoliBedah.get_akun());
-            db.insert("polibedah", null, values);
+            values.put("id", ModalHistori.get_id());
+            values.put("idpoli", ModalHistori.get_idpoli());
+            values.put("noantrian", ModalHistori.get_noantrian());
+            values.put("nama", ModalHistori.get_nama());
+            values.put("email", ModalHistori.get_email());
+            values.put("dokter", ModalHistori.get_dokter());
+            values.put("poliklinik", ModalHistori.get_poliklinik());
+            values.put("rs", ModalHistori.get_rs());
+            db.insert("History", null, values);
+        }catch (Exception e){}
+    }
+
+    public void readHistory(Integer idpoli){
+        try {
+            db = openHelper.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from History where idpoli = ?",
+                    new String[]{String.valueOf(idpoli)});
+            if (cursor.moveToFirst()){
+                do {
+                    ModalHistori histori = new ModalHistori();
+                    histori.set_id(cursor.getInt(0));
+                    histori.set_idpoli(cursor.getInt(1));
+                    histori.set_noantrian(cursor.getInt(2));
+                    histori.set_nama(cursor.getString(3));
+                    histori.set_email(cursor.getString(4));
+                    histori.set_dokter(cursor.getString(5));
+                    histori.set_poliklinik(cursor.getString(6));
+                    histori.set_rs(cursor.getString(7));
+                } while (cursor.moveToNext());
+            } else {}
         } catch (Exception e){}
     }
 
-    public Boolean readBedah(){
+    public Boolean cekHistory(String email){
         try {
             db = openHelper.getReadableDatabase();
-            Cursor cursor = db.rawQuery("select * from polibedah",null);
-            cursor.moveToNext();
-            ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
-            modalPoliBedah.set_id(cursor.getInt(0));
-            modalPoliBedah.set_idbooking(cursor.getString(1));
-            modalPoliBedah.set_namars(cursor.getString(2));
-            modalPoliBedah.set_namadok(cursor.getString(3));
-            modalPoliBedah.set_polidok(cursor.getString(4));
-            modalPoliBedah.set_akun(cursor.getString(5));
-            return true;
-        }catch (Exception e){return false;}
-    }
-
-    public Boolean cekBedah(String email){
-        try {
-            db = openHelper.getReadableDatabase();
-            Cursor cursor = db.rawQuery("select * from polibedah where email = ?",null);
+            Cursor cursor = db.rawQuery("select * from History where email = ?",
+                    new String[]{email});
             if (cursor.getCount()>0){
-                    return false;
+                return false;
             } else {
-                ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
-                modalPoliBedah.set_id(cursor.getInt(0));
-                modalPoliBedah.set_idbooking(cursor.getString(1));
-                modalPoliBedah.set_namars(cursor.getString(2));
-                modalPoliBedah.set_namadok(cursor.getString(3));
-                modalPoliBedah.set_polidok(cursor.getString(4));
-                modalPoliBedah.set_akun(cursor.getString(5));
                 return true;
             }
         }catch (Exception e){return false;}
     }
 
-    public Boolean cekBokingBedah(String email){
+    public Boolean readAccountHistory(String email){
         try {
             db = openHelper.getReadableDatabase();
-            Cursor cursor = db.rawQuery("select * from polibedah where email = ?",null);
+            Cursor cursor = db.rawQuery("select * from History where email = ?",
+                    new String[]{email});
             if (cursor.moveToFirst()){
                 do {
-                    ModalPoliBedah modalPoliBedah = new ModalPoliBedah();
-                    modalPoliBedah.set_id(cursor.getInt(0));
-                    modalPoliBedah.set_idbooking(cursor.getString(1));
-                    modalPoliBedah.set_namars(cursor.getString(2));
-                    modalPoliBedah.set_namadok(cursor.getString(3));
-                    modalPoliBedah.set_polidok(cursor.getString(4));
-                    modalPoliBedah.set_akun(cursor.getString(5));
+                    ModalHistori histori = new ModalHistori();
+                    histori.set_id(cursor.getInt(0));
+                    histori.set_idpoli(cursor.getInt(1));
+                    histori.set_noantrian(cursor.getInt(2));
+                    histori.set_nama(cursor.getString(3));
+                    histori.set_email(cursor.getString(4));
+                    histori.set_dokter(cursor.getString(5));
+                    histori.set_poliklinik(cursor.getString(6));
+                    histori.set_rs(cursor.getString(7));
                 } while (cursor.moveToNext());
                 return true;
             } else {
                 return false;
             }
-        }catch (Exception e){return false;}
+        } catch (Exception e){return false;}
     }
 }

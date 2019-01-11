@@ -2,6 +2,7 @@ package com.example.praktek.klinik;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -21,15 +22,16 @@ public class HistoryBookingActivity extends AppCompatActivity {
         dokter = (TextView) findViewById(R.id.history_dokter);
         poliklinik = (TextView) findViewById(R.id.history_poliklinik);
         rs = (TextView) findViewById(R.id.history_rs);
-        db = DatabaseAccess.getInstance(getApplicationContext());
-        db.cekBokingBedah(ModalPoliBedah.get_akun());
+        DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
 
-        nomor.setText(ModalPoliBedah.get_idbooking());
-        nama.setText(ModalLogin.get_nama());
-        email.setText(ModalPoliBedah.get_akun());
-        dokter.setText(ModalPoliBedah.get_namadok());
-        poliklinik.setText(ModalPoliBedah.get_polidok());
-        rs.setText(ModalPoliBedah.get_namars());
+
+        nomor.setText(String.valueOf(Integer.valueOf(ModalHistori.get_noantrian())));
+        nama.setText(ModalHistori.get_nama());
+        email.setText(ModalHistori.get_email());
+        dokter.setText(ModalHistori.get_dokter());
+        poliklinik.setText(ModalHistori.get_poliklinik());
+        rs.setText(ModalHistori.get_rs());
+
     }
 
     public void BackToAkun(View v) {
