@@ -2,8 +2,10 @@ package com.example.praktek.klinik;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -17,6 +19,7 @@ public class InfoAkunActivity extends AppCompatActivity {
 
     CardView akun, riwayat, logout;
     CardView home, rs, dokter;
+    private DatabaseAccess db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,7 @@ public class InfoAkunActivity extends AppCompatActivity {
         home = (CardView) findViewById(R.id.info_cardhome);
         rs = (CardView) findViewById(R.id.info_cardrs);
         dokter = (CardView) findViewById(R.id.info_carddokter);
+        db = DatabaseAccess.getInstance(getApplicationContext());
 
         akun.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +44,7 @@ public class InfoAkunActivity extends AppCompatActivity {
         riwayat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                db.readAccountHistory(ModalLogin.get_email());
                 Intent intent = new Intent(InfoAkunActivity.this, HistoryBookingActivity.class);
                 startActivity(intent);
             }
@@ -48,8 +53,7 @@ public class InfoAkunActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InfoAkunActivity.this, Login.class);
-                startActivity(intent);
+                showDialog();
             }
         });
 
@@ -58,6 +62,7 @@ public class InfoAkunActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InfoAkunActivity.this, Menu.class);
                 startActivity(intent);
+                InfoAkunActivity.this.finish();
             }
         });
 
@@ -66,6 +71,7 @@ public class InfoAkunActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InfoAkunActivity.this, RumahSakitActivity.class);
                 startActivity(intent);
+                InfoAkunActivity.this.finish();
             }
         });
 
@@ -74,7 +80,37 @@ public class InfoAkunActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(InfoAkunActivity.this, BookingDokterActivity.class);
                 startActivity(intent);
+                InfoAkunActivity.this.finish();
             }
         });
+    }
+    private void showDialog(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Apakah anda yakin akan logout?");
+        alert
+                .setMessage("Klik Ya untuk logout")
+                .setIcon(R.drawable.app_logo)
+                .setCancelable(false)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        ModalLogin modalLogin = new ModalLogin();
+                        modalLogin.set_email("");
+                        modalLogin.set_password("");
+                        modalLogin.set_nama("");
+                        modalLogin.set_notlp("");
+                        Intent intent = new Intent(InfoAkunActivity.this, Login.class);
+                        startActivity(intent);
+                        InfoAkunActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertDialog = alert.create();
+        alertDialog.show();
     }
 }

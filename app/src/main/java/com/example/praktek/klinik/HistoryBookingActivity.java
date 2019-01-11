@@ -23,7 +23,7 @@ public class HistoryBookingActivity extends AppCompatActivity {
         poliklinik = (TextView) findViewById(R.id.history_poliklinik);
         rs = (TextView) findViewById(R.id.history_rs);
         DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
-
+        db.readAccountHistory(ModalLogin.get_email());
 
         nomor.setText(String.valueOf(Integer.valueOf(ModalHistori.get_noantrian())));
         nama.setText(ModalHistori.get_nama());

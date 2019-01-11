@@ -31,7 +31,6 @@ public class BookingDokterActivity extends AppCompatActivity {
                 DatabaseAccess db = DatabaseAccess.getInstance(getApplicationContext());
                 boolean getDataRS = db.getDataDokter(id);
                 if (getDataRS == true){
-                    db.readBedah();
                     IntentDetail();
                 } else {}
             }
