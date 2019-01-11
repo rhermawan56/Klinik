@@ -96,7 +96,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Riwayat Pemeriksaan"
+                        android:text="Riwayat Booking"
                         android:textColor="@color/textwhite"
                         android:layout_gravity="center"/>
                 </android.support.v7.widget.CardView>
